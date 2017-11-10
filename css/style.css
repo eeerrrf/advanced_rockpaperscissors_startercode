@@ -7,3 +7,17 @@ h1{
 first-letter:h1{
     color:red;
 }
+
+p{
+    text-align:center;
+}
+
+h2{
+    text-align:center;
+    border:dashed gold 10px;
+}
+
+.col-sm-4{
+    border-radius:400px;
+    border:aquamarine solid 12px;
+}
