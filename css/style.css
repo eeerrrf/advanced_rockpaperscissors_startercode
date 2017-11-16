@@ -20,4 +20,10 @@ h2{
 .col-sm-4{
     border-radius:400px;
     border:aquamarine solid 12px;
+    background-color:gray;
+}
+
+.rock,.paper,.scissor{
+    width:400px;
+    height:300px;
 }

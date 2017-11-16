@@ -1,6 +1,36 @@
+$(document).ready(function(){
+        
+        var game
+        
+        var rpsgame =["rock", "paper","scissor"];
+        rpsgame.length = Math.floor(Math.random()*3);
+        
+$(".rock").click(function(){
+        $(".rps").append("rock");
+          game="rock"
+        if(game===rock){
+                $(".wins").append("tie");
+        }
+        
+       else if(game!==paper){
+                $(".wins").append("loss");
+        }
+        
+        else if(game===scissors){
+                $(".wins").append("win");
+        }
+});
 
+$(".paper").click(function(){
+        $(".rps").append("paper");
+});
 
+$(".scissor").click(function(){
+        $(".rps").append("rock");
 
+});
+
+});
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project

@@ -3,11 +3,11 @@
 
   <head>
       <title>RPS Game</title>
-      <link rel = "stylesheet" href="css/style.css">
-      <script rel = "stylesheet" href="script.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <link rel = "stylesheet" href="css/style.css">
+      <script src="js/script.js"></script>
+     
       <!-- Link Javascript File here -->
       
       <!-- Latest compiled and minified Bootstrap CSS -->
@@ -17,15 +17,15 @@
     <h1>Rock, Paper, Scissor Royale</h1>
     <div class="row">
       <div class="col-sm-4" >
-    <img src="img/rock.png" height=400 width=400 border-radius=400px>
+    <img class="rock" src="img/rock.png" height=400 width=400 border-radius=400px>
     </div>
     
     <div class="col-sm-4" >
-    <img src="img/paper.jpeg" height=400 width=400 border-radius=400px>
+    <img class="paper" src="img/paper.jpeg" height=400 width=400 border-radius=400px>
     </div>
     
     <div class="col-sm-4" >
-    <img src="img/scissors.jpg" height=400 width=400 border-radius=400px>
+    <img class="scissor" src="img/scissors.jpg" height=400 width=400 border-radius=400px>
     </div>
     
       <!-- TASK 1: In the div below. 
@@ -40,16 +40,16 @@
     <div>
     
     <div>
-      <p>User</p>
-      <p>PC</p>
-      <p >Wins</p>
+      <p class="rps">User</p>
+      <p class="pc" >PC</p>
+      <p class="wins" >Wins</p>
       <div class="col-sm-3">
       <img src="img/scissortrophys.jpg" height="400" width="300px" >
+      </div>
        <div class="col-sm-3">
       <img src="img/rpstrophy.jpg" height="400" width="300px" margin-left="500px">
       </div>
-      </div>
-      <h2>Score</h2>
+      <h2 class="score">Score</h2>
       </div>
 
 
