@@ -8,25 +8,25 @@ $(document).ready(function(){
 $(".rock").click(function(){
         $(".rps").append("rock");
           game="rock"
-        if(game===rock){
+        if(game===rpsgame){
                 $(".wins").append("tie");
         }
         
-       else if(game!==paper){
+       else if(game!==rpsgame){
                 $(".wins").append("loss");
         }
         
-        else if(game===scissors){
-                $(".wins").append("win");
+        else if(game===rpsgame){
+                $(".wins").html("win");
         }
 });
 
 $(".paper").click(function(){
-        $(".rps").append("paper");
+        $(".rps").html("paper");
 });
 
 $(".scissor").click(function(){
-        $(".rps").append("rock");
+        $(".rps").html("rock");
 
 });
 
