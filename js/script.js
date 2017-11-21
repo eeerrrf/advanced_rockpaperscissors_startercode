@@ -2,31 +2,62 @@ $(document).ready(function(){
         
         var game
         
-        var rpsgame =["rock", "paper","scissor"];
-        rpsgame.length = Math.floor(Math.random()*3);
+      var rpsgame =["rock", "paper","scissor"];
+   rpsgame.length = Math.floor(Math.random()*2);
         
 $(".rock").click(function(){
-        $(".rps").append("rock");
-          game="rock"
-        if(game===rpsgame){
-                $(".wins").append("tie");
+        $(".rps").html("rock");
+        
+          game= 0
+          
+        if(game===rpsgame.length){
+                $(".wins").html("tie");
         }
         
-       else if(game!==rpsgame){
-                $(".wins").append("loss");
+       else if(game+1===rpsgame.length){
+                $(".wins").html("loss");
         }
         
-        else if(game===rpsgame){
+        else if(game+2===rpsgame.length){
                 $(".wins").html("win");
         }
 });
 
 $(".paper").click(function(){
         $(".rps").html("paper");
+        
+        game= 1
+        
+        if(game===rpsgame.length){
+                $(".wins").html("tie");
+        }
+        
+        if(game+1===rpsgame.length){
+                $(".wins").html("loss");
+        }
+        
+        if(game-1===rpsgame.length){
+                $(".wins").html("wins");
+        }
 });
 
 $(".scissor").click(function(){
         $(".rps").html("rock");
+        
+        game = 2
+        
+        if(game===rpsgame.length){
+                $(".wins").html("tie");
+                
+        }
+        
+        if(game-2===rpsgame.length){
+                $(".wins").html("loss");
+        }
+        
+        if(game-1===rpsgame.length){
+                $(".wins").html("tie");
+        }
 
 });
 

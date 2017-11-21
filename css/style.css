@@ -15,10 +15,10 @@ p{
 h2{
     text-align:center;
     border:dashed gold 10px;
+    font-size:100px;
 }
 
 .col-sm-4{
-    border-radius:400px;
     border:aquamarine solid 12px;
     background-color:gray;
 }
@@ -26,4 +26,9 @@ h2{
 .rock,.paper,.scissor{
     width:400px;
     height:300px;
+}
+
+.after{
+    float:left;
+    display:flex;
 }
