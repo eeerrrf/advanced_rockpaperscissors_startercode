@@ -2,11 +2,13 @@ $(document).ready(function(){
         
         var game
         
-      var rpsgame =["rock", "paper","scissor"];
-   rpsgame.length = Math.floor(Math.random()*2);
+
         
 $(".rock").click(function(){
         $(".rps").html("rock");
+        
+              var rpsgame =["rock", "paper","scissor"];
+   rpsgame.length = Math.floor(Math.random()*2);
         
           game= 0
           
