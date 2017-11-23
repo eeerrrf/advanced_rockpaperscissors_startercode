@@ -8,9 +8,10 @@ $(".rock").click(function(){
         $(".rps").html("rock");
         
               var rpsgame =["rock", "paper","scissor"];
-   rpsgame.length = Math.floor(Math.random()*2);
+   rpsgame.length = Math.floor(Math.random()*3);
         
-          game= 0
+        console.log(rpsgame.length);
+          game= 0;
           
         if(game===rpsgame.length){
                 $(".wins").html("tie");
@@ -28,7 +29,12 @@ $(".rock").click(function(){
 $(".paper").click(function(){
         $(".rps").html("paper");
         
-        game= 1
+              var rpsgame =["rock", "paper","scissor"];
+   rpsgame.length = Math.floor(Math.random()*3);
+        
+                console.log(rpsgame.length);
+        
+        game= 1;
         
         if(game===rpsgame.length){
                 $(".wins").html("tie");
@@ -39,14 +45,19 @@ $(".paper").click(function(){
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("wins");
+                $(".wins").html("win");
         }
 });
 
 $(".scissor").click(function(){
-        $(".rps").html("rock");
+        $(".rps").html("scissor");
         
-        game = 2
+              var rpsgame =["rock", "paper","scissor"];
+   rpsgame.length = Math.floor(Math.random()*3);
+        
+                console.log(rpsgame.length);
+        
+        game = 2;
         
         if(game===rpsgame.length){
                 $(".wins").html("tie");
@@ -58,7 +69,7 @@ $(".scissor").click(function(){
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("tie");
+                $(".wins").html("win");
         }
 
 });
