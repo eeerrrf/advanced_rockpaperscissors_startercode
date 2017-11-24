@@ -1,8 +1,10 @@
 $(document).ready(function(){
         
-        var game
+        var game;
         
-
+        var score=0;
+        
+        var otherscore=0;
         
 $(".rock").click(function(){
         $(".rps").html("rock");
@@ -14,15 +16,20 @@ $(".rock").click(function(){
           game= 0;
           
         if(game===rpsgame.length){
-                $(".wins").html("tie");
+                $(".wins").html("User ties");
+                $(".pc").html("rock")
         }
         
        else if(game+1===rpsgame.length){
-                $(".wins").html("loss");
+                $(".wins").html("User losses");
+                $(".pc").html("paper")
+                 $(".it").html(otherscore=otherscore+1);
         }
         
         else if(game+2===rpsgame.length){
-                $(".wins").html("win");
+                $(".wins").html("User wins");
+                $(".pc").html("scissor");
+                $(".you").html(score=score+1);
         }
 });
 
@@ -37,15 +44,20 @@ $(".paper").click(function(){
         game= 1;
         
         if(game===rpsgame.length){
-                $(".wins").html("tie");
+                $(".wins").html("User ties");
+                 $(".pc").html("paper")
         }
         
         if(game+1===rpsgame.length){
-                $(".wins").html("loss");
+                $(".wins").html("User losses");
+                 $(".pc").html("scissor")
+                 $(".it").html(otherscore=otherscore+1);
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("win");
+                $(".wins").html("User wins");
+                 $(".pc").html("rock")
+                 
         }
 });
 
@@ -60,19 +72,51 @@ $(".scissor").click(function(){
         game = 2;
         
         if(game===rpsgame.length){
-                $(".wins").html("tie");
-                
+                $(".wins").html("User ties");
+                 $(".pc").html("scissor")
         }
         
         if(game-2===rpsgame.length){
-                $(".wins").html("loss");
+                $(".wins").html("User losses");
+                 $(".pc").html("rock")
+                 $(".it").html(otherscore=otherscore+1);
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("win");
+                $(".wins").html("User wins");
+                $(".pc").html("paper")
+                 $(".you").html(score=score+1);
         }
 
 });
+
+
+
+$("#reset").click(location.reload);
+
+
+var interval;
+
+function stopTimer() {
+    clearInterval(interval);
+}
+
+interval = setInterval(function() {
+    updateTime();
+}, 1000);
+
+
+
+var second=0;
+function updateTime(){
+    
+second=second+1;
+
+
+$("#timer").html(second);
+
+}
+
 
 });
 //Class 1:
