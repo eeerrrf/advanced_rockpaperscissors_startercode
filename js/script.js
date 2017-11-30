@@ -31,6 +31,28 @@ $(".rock").click(function(){
                 $(".pc").html("scissor");
                 $(".you").html(score=score+1);
         }
+        
+                 if(score>otherscore){
+    $(".ahead").html("You are ahead!");
+}
+
+         if(otherscore>score){
+    $(".ahead").html("You are behind!");
+}
+               
+if(score===10){
+    $(".winner").html("You won, congratulations!")
+}
+
+if(otherscore===10){
+    $(".winner").html("You lost, better luck next time")
+}
+
+if(otherscore && score===10){
+    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+}
+
+          
 });
 
 $(".paper").click(function(){
@@ -57,8 +79,29 @@ $(".paper").click(function(){
         if(game-1===rpsgame.length){
                 $(".wins").html("User wins");
                  $(".pc").html("rock")
-                 
+                 $(".you").html(score=score+1);
         }
+        
+         if(score>otherscore){
+    $(".ahead").html("You are ahead!");
+}
+
+         if(otherscore>score){
+    $(".ahead").html("You are behind!");
+}
+
+if(score===10){
+    $(".winner").html("You won, congratulations!")
+}
+
+if(otherscore===10){
+    $(".winner").html("You lost, better luck next time")
+}
+
+if(otherscore && score===10){
+    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+}                 
+        
 });
 
 $(".scissor").click(function(){
@@ -88,8 +131,27 @@ $(".scissor").click(function(){
                  $(".you").html(score=score+1);
         }
 
-});
+         if(score>otherscore){
+    $(".ahead").html("You are ahead!");
+}
 
+         if(otherscore>score){
+    $(".ahead").html("You are behind!");
+}
+
+if(score===10){
+    $(".winner").html("You won, congratulations!")
+}
+
+if(otherscore===10){
+    $(".winner").html("You lost, better luck next time")
+}
+
+if(otherscore && score===10){
+    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+}
+
+});
 
 
 $("#reset").click(location.reload);
@@ -116,7 +178,6 @@ second=second+1;
 $("#timer").html(second);
 
 }
-
 
 });
 //Class 1:

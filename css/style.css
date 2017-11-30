@@ -34,6 +34,9 @@ h2{
 }
 
 .after{
-    float:left;
     display:flex;
+}
+
+h3{
+    
 }
