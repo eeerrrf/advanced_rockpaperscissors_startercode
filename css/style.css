@@ -4,8 +4,9 @@ h1{
     color:orange;
 }
 
-first-letter:h1{
+h1::first-letter{
     color:red;
+    background-color:black;
 }
 
 #pc1{
