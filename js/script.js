@@ -1,4 +1,39 @@
 $(document).ready(function(){
+      
+      
+$("#reset").click(location.reload);
+
+
+
+var interval;
+
+function stopTimer() {
+    clearInterval(interval);
+}
+
+interval = setInterval(function() {
+    updateTime();
+}, 1000);
+
+
+var minute=0;
+var second=0;
+function updateTime(){
+    
+second=second+1;
+
+if(second===60){
+    minute=minute+1;
+    second=second-60;
+}
+
+
+
+$("#timer").html(second);
+$("#minutes").html(minute);
+}
+
+});
         
         var game;
         
@@ -48,7 +83,7 @@ if(otherscore===10){
     $(".winner").html("You lost, better luck next time")
 }
 
-if(otherscore && score===10){
+if(otherscore ===10 && score===10){
     $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
 }
 
@@ -98,7 +133,7 @@ if(otherscore===10){
     $(".winner").html("You lost, better luck next time")
 }
 
-if(otherscore && score===10){
+if(otherscore ===10 && score===10){
     $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
 }                 
         
@@ -147,39 +182,13 @@ if(otherscore===10){
     $(".winner").html("You lost, better luck next time")
 }
 
-if(otherscore && score===10){
+if(otherscore ===10 && score===10){
     $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
 }
 
 });
 
 
-$("#reset").click(location.reload);
-
-
-var interval;
-
-function stopTimer() {
-    clearInterval(interval);
-}
-
-interval = setInterval(function() {
-    updateTime();
-}, 1000);
-
-
-
-var second=0;
-function updateTime(){
-    
-second=second+1;
-
-
-$("#timer").html(second);
-
-}
-
-});
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project

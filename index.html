@@ -14,7 +14,8 @@
   </head>
 
   <body>
-    <div id="timer">Time on website</div>
+    <span id="minutes"></span> m
+    <span id="timer">Time on website</span>s  
     <h1>Rock, Paper, Scissor Royale</h1>
     <div class="winner">
       <h3>Whoever gets to 10 wins first, well wins!!!</h3>
@@ -43,13 +44,15 @@
   
     
     <div class=row>
-      
-      <p id="player">User</p>
-      <p id="player" class="rps"></p>
-      <p id="pc1">Super Advanced AI (Not really)</p>
-      <p id="pc2" class="pc" ></p>
-      
+      <div class="col-sm-6">
+        <p id="player">User</p>
+        <p id="player" class="rps"></p>
       </div>
+      <div class="col-sm-6">
+        <p id="pc1">Super Advanced AI (Not really)</p>
+        <p id="pc2" class="pc" ></p>
+      </div>
+    </div>
       
       <center><p id="win">Status</p></center>
       <p id="win" class="wins" ></p>

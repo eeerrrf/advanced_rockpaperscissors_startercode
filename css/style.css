@@ -2,9 +2,12 @@ h1{
     text-align:center;
     font-family:serif;
     color:orange;
+    background-image: url("img/title.jpg");
+     background-repeat: no-repeat;
+     background-size:100%;
 }
 
-h1::first-letter{
+h1::first-letter {
     color:red;
     background-color:black;
 }
@@ -32,6 +35,7 @@ h2{
 .rock,.paper,.scissor{
     width:400px;
     height:300px;
+    cursor:pointer;
 }
 
 .after{
@@ -39,5 +43,11 @@ h2{
 }
 
 h3{
-    
+    text-align:center;
+    background-color:black;
+    color:white;
+}
+
+#player, #pc1, #pc2{
+    text-align:center;
 }
