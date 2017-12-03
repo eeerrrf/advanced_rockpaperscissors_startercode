@@ -1,5 +1,9 @@
 $(document).ready(function(){
       
+      $("#1winner").hide();
+
+$("#2winner").hide();
+      
       
 $("#reset").click(location.reload);
 
@@ -185,6 +189,7 @@ if(otherscore===10){
 if(otherscore ===10 && score===10){
     $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
 }
+
 
 });
 
