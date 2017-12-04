@@ -38,6 +38,32 @@ $("#minutes").html(minute);
 
 }
 
+$("#reset").click(location.reload);
+
+
+
+var hi;
+
+function Timer() {
+    clearInterval(hi);
+}
+
+interval = setInterval(function() {
+    Time();
+}, 1000);
+
+
+var seconds=1;
+function Time(){
+    
+seconds=seconds-1;
+
+if(seconds===0){
+    alert("Welcome to a game of Rock, Paper, Scissors, or RPS royale!!!")
+}
+}
+
+
 
         
         var game;
@@ -82,12 +108,12 @@ $(".rock").click(function(){
                
 if(score===10){
     $(".winner").html("You won, congratulations!")
-    $("#1winner").show()
+    $("#2winner").show()
 }
 
 if(otherscore===10){
     $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#2winner"). show ()
+    $("#1winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
@@ -134,12 +160,12 @@ $(".paper").click(function(){
 
 if(score===10){
     $(".winner").html("You won, congratulations!")
-    $("#1winner").show()
+    $("#2winner").show()
 }
 
 if(otherscore===10){
     $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#2winner"). show ()
+    $("#1winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
@@ -185,12 +211,12 @@ $(".scissor").click(function(){
 
 if(score===10){
     $(".winner").html("You won, congratulations!")
-    $("#1winner").show()
+    $("#2winner").show()
 }
 
 if(otherscore===10){
     $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#2winner"). show ()
+    $("#1winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
