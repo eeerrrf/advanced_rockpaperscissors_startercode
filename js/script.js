@@ -1,9 +1,8 @@
 $(document).ready(function(){
       
-      $("#1winner").hide();
+        $("#1winner").hide();
 
 $("#2winner").hide();
-      
       
 $("#reset").click(location.reload);
 
@@ -35,9 +34,11 @@ if(second===60){
 
 $("#timer").html(second);
 $("#minutes").html(minute);
+
+
 }
 
-});
+
         
         var game;
         
@@ -81,10 +82,12 @@ $(".rock").click(function(){
                
 if(score===10){
     $(".winner").html("You won, congratulations!")
+    $("#1winner").show()
 }
 
 if(otherscore===10){
-    $(".winner").html("You lost, better luck next time")
+    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+    $("#2winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
@@ -131,10 +134,12 @@ $(".paper").click(function(){
 
 if(score===10){
     $(".winner").html("You won, congratulations!")
+    $("#1winner").show()
 }
 
 if(otherscore===10){
-    $(".winner").html("You lost, better luck next time")
+    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+    $("#2winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
@@ -180,10 +185,12 @@ $(".scissor").click(function(){
 
 if(score===10){
     $(".winner").html("You won, congratulations!")
+    $("#1winner").show()
 }
 
 if(otherscore===10){
-    $(".winner").html("You lost, better luck next time")
+    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+    $("#2winner"). show ()
 }
 
 if(otherscore ===10 && score===10){
@@ -193,7 +200,7 @@ if(otherscore ===10 && score===10){
 
 });
 
-
+});
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project
