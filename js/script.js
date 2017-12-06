@@ -59,7 +59,7 @@ function Time(){
 seconds=seconds-1;
 
 if(seconds===0){
-    alert("Welcome to a game of Rock, Paper, Scissors, or RPS royale!!!")
+    alert("Welcome to a game of Rock, Paper, Scissors, or RPS royale!!! It is a random game, try it annd see if you like like it!!!")
 }
 }
 
@@ -105,6 +105,10 @@ $(".rock").click(function(){
          if(otherscore>score){
     $(".ahead").html("You are behind!");
 }
+
+ if (score ===otherscore){
+        $(".ahead").html("Looks like you are tied up at the moment!");
+    }
                
 if(score===10){
     $(".winner").html("You won, congratulations!")
@@ -158,6 +162,10 @@ $(".paper").click(function(){
     $(".ahead").html("You are behind!");
 }
 
+ if (score ===otherscore){
+        $(".ahead").html("Looks like you are tied up at the moment!");
+    }
+
 if(score===10){
     $(".winner").html("You won, congratulations!")
     $("#2winner").show()
@@ -207,7 +215,16 @@ $(".scissor").click(function(){
 
          if(otherscore>score){
     $(".ahead").html("You are behind!");
+    
 }
+
+    if (score ===otherscore){
+        $(".ahead").html("Looks like you are tied up at the moment!");
+    }
+
+    if(otherscore===score){
+       $(".ahead") .html("I think you guys are tied up in the moment")
+    }
 
 if(score===10){
     $(".winner").html("You won, congratulations!")
