@@ -10,7 +10,7 @@ var colors = ['red', 'orange', 'green', 'salmon','gold','gainsboro','navy','aqua
 
 $(".F").click(function() {var randColor = colors[Math.floor(Math.random()*colors.length)];
          $("body").css("background-color", randColor);
-     });
+});
       
 $("#reset").click(location.reload);
 
