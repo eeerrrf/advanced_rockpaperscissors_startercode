@@ -5,10 +5,14 @@ $(document).ready(function(){
 $("#2winner").hide();
 
 $("#tie").hide();
+
+var colors = ['red', 'orange', 'green', 'salmon','gold','gainsboro','navy','aquamarine','silver'];
+
+$(".F").click(function() {var randColor = colors[Math.floor(Math.random()*colors.length)];
+         $("body").css("background-color", randColor);
+     });
       
 $("#reset").click(location.reload);
-
-
 
 var interval;
 
@@ -23,13 +27,14 @@ interval = setInterval(function() {
 
 var minute=0;
 var second=0;
+
 function updateTime(){
     
-second=second+1;
+    second=second+1;
 
-if(second===60){
-    minute=minute+1;
-    second=second-60;
+    if(second===60){
+        minute=minute+1;
+        second=second-60;
 }
 
 
@@ -44,44 +49,45 @@ $("#reset").click(location.reload);
 
 
 
-var hi;
+    var hi;
 
-function Timer() {
-    clearInterval(hi);
-}
+    function Timer() {
+        clearInterval(hi);
+    }
 
-interval = setInterval(function() {
-    Time();
-}, 1000);
+    interval = setInterval(function() {
+        Time();
+    }, 1000);
 
 
-var seconds=1;
+    var seconds=1;
+    
 function Time(){
     
-seconds=seconds-1;
+    seconds=seconds-1;
 
-if(seconds===0){
-    alert("Welcome to a game of Rock, Paper, Scissors, or RPS royale!!! It is a random game, try it annd see if you like like it!!!")
+    if(seconds===0){
+        alert("Welcome to a game of Rock, Paper, Scissors, or RPS royale!!! It is a random game, try it annd see if you like like it!!!")
 }
 }
 
 
 
         
-        var game;
+var game;
         
-        var score=0;
+var score=0;
         
-        var otherscore=0;
+var otherscore=0;
         
 $(".rock").click(function(){
         $(".rps").html("rock");
         
-              var rpsgame =["rock", "paper","scissor"];
-   rpsgame.length = Math.floor(Math.random()*3);
+        var rpsgame =["rock", "paper","scissor"];
+        rpsgame.length = Math.floor(Math.random()*3);
         
-        console.log(rpsgame.length);
-          game= 0;
+            console.log(rpsgame.length);
+            game= 0;
           
         if(game===rpsgame.length){
                 $(".wins").html("User ties");
@@ -91,7 +97,7 @@ $(".rock").click(function(){
        else if(game+1===rpsgame.length){
                 $(".wins").html("User losses");
                 $(".pc").html("paper")
-                 $(".it").html(otherscore=otherscore+1);
+                $(".it").html(otherscore=otherscore+1);
         }
         
         else if(game+2===rpsgame.length){
@@ -100,32 +106,32 @@ $(".rock").click(function(){
                 $(".you").html(score=score+1);
         }
         
-                 if(score>otherscore){
-    $(".ahead").html("You are ahead!");
-}
+        if(score>otherscore){
+            $(".ahead").html("You are ahead!");
+        }
 
-         if(otherscore>score){
-    $(".ahead").html("You are behind!");
-}
+        if(otherscore>score){
+            $(".ahead").html("You are behind!");
+        }
 
- if (score ===otherscore){
-        $(".ahead").html("Looks like you are tied up at the moment!");
-    }
+        if (score ===otherscore){
+            $(".ahead").html("Looks like you are tied up at the moment!");
+        }
                
-if(score===10){
-    $(".winner").html("You won, congratulations!")
-    $("#2winner").show()
-}
+        if(score===10){
+            $(".winner").html("You won, congratulations!")
+            $("#2winner").show()
+        }
 
-if(otherscore===10){
-    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#1winner"). show ()
-}
+        if(otherscore===10){
+            $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+            $("#1winner"). show ()
+        }
 
-if(otherscore ===10 && score===10){
-    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
-    $("#tie").show();
-}
+        if(otherscore ===10 && score===10){
+            $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+            $("#tie").show();
+        }
 
           
 });
@@ -133,117 +139,117 @@ if(otherscore ===10 && score===10){
 $(".paper").click(function(){
         $(".rps").html("paper");
         
-              var rpsgame =["rock", "paper","scissor"];
-   rpsgame.length = Math.floor(Math.random()*3);
+        var rpsgame =["rock", "paper","scissor"];
+        rpsgame.length = Math.floor(Math.random()*3);
         
-                console.log(rpsgame.length);
+        console.log(rpsgame.length);
         
         game= 1;
         
         if(game===rpsgame.length){
-                $(".wins").html("User ties");
-                 $(".pc").html("paper")
+            $(".wins").html("User ties");
+            $(".pc").html("paper")
         }
         
         if(game+1===rpsgame.length){
-                $(".wins").html("User losses");
-                 $(".pc").html("scissor")
-                 $(".it").html(otherscore=otherscore+1);
+            $(".wins").html("User losses");
+            $(".pc").html("scissor")
+            $(".it").html(otherscore=otherscore+1);
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("User wins");
-                 $(".pc").html("rock")
-                 $(".you").html(score=score+1);
+            $(".wins").html("User wins");
+            $(".pc").html("rock")
+            $(".you").html(score=score+1);
         }
         
-         if(score>otherscore){
-    $(".ahead").html("You are ahead!");
-}
+        if(score>otherscore){
+            $(".ahead").html("You are ahead!");
+        }
 
-         if(otherscore>score){
-    $(".ahead").html("You are behind!");
-}
+        if(otherscore>score){
+            $(".ahead").html("You are behind!");
+        }
 
- if (score ===otherscore){
-        $(".ahead").html("Looks like you are tied up at the moment!");
-    }
+        if (score ===otherscore){
+            $(".ahead").html("Looks like you are tied up at the moment!");
+        }
 
-if(score===10){
-    $(".winner").html("You won, congratulations!")
-    $("#2winner").show()
-}
+        if(score===10){
+            $(".winner").html("You won, congratulations!")
+            $("#2winner").show()
+        }
 
-if(otherscore===10){
-    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#1winner"). show ()
-}
+        if(otherscore===10){
+            $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+            $("#1winner"). show ()
+        }
 
-if(otherscore ===10 && score===10){
-    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
-     $("#tie").show();
-}                 
+        if(otherscore ===10 && score===10){
+            $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+            $("#tie").show();
+        }                 
         
 });
 
 $(".scissor").click(function(){
         $(".rps").html("scissor");
         
-              var rpsgame =["rock", "paper","scissor"];
-   rpsgame.length = Math.floor(Math.random()*3);
+        var rpsgame =["rock", "paper","scissor"];
+        rpsgame.length = Math.floor(Math.random()*3);
         
                 console.log(rpsgame.length);
         
         game = 2;
         
         if(game===rpsgame.length){
-                $(".wins").html("User ties");
-                 $(".pc").html("scissor")
+            $(".wins").html("User ties");
+            $(".pc").html("scissor")
         }
         
         if(game-2===rpsgame.length){
-                $(".wins").html("User losses");
-                 $(".pc").html("rock")
-                 $(".it").html(otherscore=otherscore+1);
+            $(".wins").html("User losses");
+            $(".pc").html("rock")
+            $(".it").html(otherscore=otherscore+1);
         }
         
         if(game-1===rpsgame.length){
-                $(".wins").html("User wins");
-                $(".pc").html("paper")
-                 $(".you").html(score=score+1);
+            $(".wins").html("User wins");
+            $(".pc").html("paper")
+            $(".you").html(score=score+1);
         }
 
-         if(score>otherscore){
-    $(".ahead").html("You are ahead!");
-}
+        if(score>otherscore){
+            $(".ahead").html("You are ahead!");
+        }
 
-         if(otherscore>score){
-    $(".ahead").html("You are behind!");
+        if(otherscore>score){
+            $(".ahead").html("You are behind!");
     
-}
+        }
 
-    if (score ===otherscore){
-        $(".ahead").html("Looks like you are tied up at the moment!");
-    }
+        if (score ===otherscore){
+            $(".ahead").html("Looks like you are tied up at the moment!");
+        }
 
-    if(otherscore===score){
-       $(".ahead") .html("I think you guys are tied up in the moment")
-    }
+        if(otherscore===score){
+            $(".ahead") .html("I think you guys are tied up in the moment")
+        }
 
-if(score===10){
-    $(".winner").html("You won, congratulations!")
-    $("#2winner").show()
-}
+        if(score===10){
+            $(".winner").html("You won, congratulations!")
+            $("#2winner").show()
+        }
 
-if(otherscore===10){
-    $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
-    $("#1winner"). show ()
-}
+        if(otherscore===10){
+            $(".winner").html("You lost, better luck next time, here is a trophy for participation.")
+            $("#1winner"). show ()
+        }
 
-if(otherscore ===10 && score===10){
-    $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
-     $("#tie").show();
-}
+        if(otherscore ===10 && score===10){
+            $(".winner").html("Well ladies and gentlemen, it looks like we have a tie!!!!")
+            $("#tie").show();
+        }
 
 
 });

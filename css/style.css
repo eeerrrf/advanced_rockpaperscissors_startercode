@@ -2,9 +2,7 @@ h1{
     text-align:center;
     font-family:serif;
     color:orange;
-    background-image: url("img/title.jpg");
-     background-repeat: no-repeat;
-     background-size:100%;
+    background-color:green;
 }
 
 h1::first-letter {
