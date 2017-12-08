@@ -83,6 +83,10 @@ var otherscore=0;
 $(".rock").click(function(){
         $(".rps").html("rock");
         
+        $(".rock").css("opacity",1);
+        $(".paper").css("opacity",0.5);
+        $(".scissor").css("opacity",0.5);
+        
         var rpsgame =["rock", "paper","scissor"];
         rpsgame.length = Math.floor(Math.random()*3);
         
@@ -139,6 +143,10 @@ $(".rock").click(function(){
 $(".paper").click(function(){
         $(".rps").html("paper");
         
+        $(".paper").css("opacity",1);
+        $(".rock").css("opacity",0.5);
+        $(".scissor").css("opacity",0.5);
+        
         var rpsgame =["rock", "paper","scissor"];
         rpsgame.length = Math.floor(Math.random()*3);
         
@@ -194,6 +202,10 @@ $(".paper").click(function(){
 
 $(".scissor").click(function(){
         $(".rps").html("scissor");
+        
+        $(".scissor").css("opacity",1);
+        $(".paper").css("opacity",0.5);
+        $(".rock").css("opacity",0.5);
         
         var rpsgame =["rock", "paper","scissor"];
         rpsgame.length = Math.floor(Math.random()*3);
