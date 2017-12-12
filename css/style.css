@@ -3,6 +3,7 @@ h1{
     font-family:serif;
     color:orange;
     background-color:green;
+    cursor:help;
 }
 
 h1::first-letter {
@@ -59,4 +60,6 @@ button{
     color:orange;
     opacity:2.0;
     border-radius:500px;
+    background-color:Ivory;
+     cursor:progress;
 }

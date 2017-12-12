@@ -71,7 +71,9 @@ function Time(){
 }
 }
 
-
+$("h1").click(function(){
+    alert("Secret, there is nothing! Mwahahahahahahaaaa!");
+});
 
         
 var game;
